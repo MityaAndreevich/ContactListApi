@@ -14,6 +14,9 @@
 		5FCB5F8C276A2A7200EF4182 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB5F8A276A2A7200EF4182 /* LaunchScreen.storyboard */; };
 		5FCB5F94276A2CA300EF4182 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB5F93276A2CA300EF4182 /* Contact.swift */; };
 		5FCB5F97276A361B00EF4182 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB5F96276A361B00EF4182 /* NetworkManager.swift */; };
+		5FCB5F9E276A6A5500EF4182 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB5F9D276A6A5500EF4182 /* ContactListViewController.swift */; };
+		5FCB5FA0276B44DD00EF4182 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB5F9F276B44DD00EF4182 /* ButtonsViewController.swift */; };
+		5FCB5FA2276B451900EF4182 /* ButtonsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB5FA1276B451900EF4182 /* ButtonsViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		5FCB5F8D276A2A7200EF4182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FCB5F93276A2CA300EF4182 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		5FCB5F96276A361B00EF4182 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5FCB5F9D276A6A5500EF4182 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		5FCB5F9F276B44DD00EF4182 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
+		5FCB5FA1276B451900EF4182 /* ButtonsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,9 @@
 		5FCB5F9B276A389E00EF4182 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5FCB5F9D276A6A5500EF4182 /* ContactListViewController.swift */,
+				5FCB5F9F276B44DD00EF4182 /* ButtonsViewController.swift */,
+				5FCB5FA1276B451900EF4182 /* ButtonsViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,9 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FCB5FA2276B451900EF4182 /* ButtonsViewCell.swift in Sources */,
 				5FCB5F80276A2A7100EF4182 /* AppDelegate.swift in Sources */,
+				5FCB5F9E276A6A5500EF4182 /* ContactListViewController.swift in Sources */,
 				5FCB5F97276A361B00EF4182 /* NetworkManager.swift in Sources */,
 				5FCB5F94276A2CA300EF4182 /* Contact.swift in Sources */,
+				5FCB5FA0276B44DD00EF4182 /* ButtonsViewController.swift in Sources */,
 				5FCB5F82276A2A7100EF4182 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
