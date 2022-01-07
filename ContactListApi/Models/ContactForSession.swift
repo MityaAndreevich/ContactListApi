@@ -1,23 +1,28 @@
 //
-//  Contact.swift
+//  ContactForSession.swift
 //  ContactListApi
 //
-//  Created by Dmitry Logachev on 15.12.2021.
+//  Created by Dmitry Logachev on 23.12.2021.
 //
 
 import Foundation
 
-struct Contact: Codable {
+struct ContactForSession: Codable {
+    let info: Info?
+    let results: [Results]?
+}
+
+struct Results: Codable {
     let gender: String?
     let name: Name?
     let location: Location?
     let email: String?
     let login: Login?
-    let dob: Dob?
-    let registrated: Registrated?
+    let dob, registered: Dob?
+   // let registered: Registered?
     let phone: String?
     let cell: String?
-    let id: Id?
+    let id: ID?
     let picture: Picture?
     let nat: String?
 }
@@ -35,7 +40,7 @@ struct Location: Codable {
     let country: String?
     let postcode: Int?
     let coordinates: Coordinates?
-    let timezone: TimeZone?
+    let timezone: Timezone?
 }
 //MARK: - Street
 struct Street: Codable {
@@ -48,13 +53,19 @@ struct Coordinates: Codable {
     let longitude: String?
 }
 //MARK: - TimeZone
-struct TimeZone: Codable {
+struct Timezone: Codable {
     let offset: String?
     let description: String?
 }
 //MARK: - Login
 struct Login: Codable {
-    let uuid, username, password: String?
+    let uuid: String?
+    let username: String?
+    let password: String?
+    let salt: String?
+    let md5: String?
+    let sha1: String?
+    let sha256: String?
 }
 //MARK: - Dob
 struct Dob: Codable {
@@ -62,16 +73,26 @@ struct Dob: Codable {
     let age: Int?
 }
 //MARK: - Registrated
-struct Registrated: Codable {
-    let date: String?
-    let age: Int?
-}
+//struct Registered: Codable {
+   // let date: String?
+   // let age: Int?
+//}
 //MARK: - ID
-struct Id: Codable {
-    let name, value: String?
+struct ID: Codable {
+    let name: String?
+    let value: String?
 }
 //MARK: - Picture
 struct Picture: Codable {
-    let large, medium, thumbnail: String?
+    let large: String?
+    let medium: String?
+    let thumbnail: String?
+}
+//MARK: - Info
+struct Info: Codable {
+    let seed: String?
+    let results: Int?
+    let page: Int?
+    let version: String?
 }
 

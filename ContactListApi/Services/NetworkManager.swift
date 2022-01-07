@@ -9,7 +9,7 @@ import Foundation
 
 enum Link: String {
     case linkFor1 = "https://randomuser.me/api/"
-    case LinkFor20 = "https://randomuser.me/api/?results=20"
+    case linkFor20 = "https://randomuser.me/api/?results=10"
 }
 
 enum NetworkError: Error {
@@ -22,7 +22,7 @@ class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
     
-    func fetchUser(from url: String, completion: @escaping(Result<Contact, NetworkError>) -> Void) {
+    func fetchData(from url: String, completion: @escaping(Result<ContactForSession, NetworkError>) -> Void) {
         guard let url = URL(string: url) else {
             completion(.failure(.invalidURL))
             return
@@ -34,14 +34,44 @@ class NetworkManager {
                 return
             }
             do {
-                let userContact = try JSONDecoder().decode(Contact.self, from: data)
+                let decoder = JSONDecoder()
+                let contacts = try decoder.decode(ContactForSession.self, from: data)
                 DispatchQueue.main.async {
-                    completion(.success(userContact))
+                    completion(.success(contacts))
                 }
             } catch {
                 completion(.failure(.decodingError))
             }
         }.resume()
+    }
+    
+    func fetch<T: Decodable>(dataType: T.Type, from url: String, completion: @escaping(Result<T, NetworkError>) -> Void) {
+        guard let url = URL(string: url) else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data else {
+                completion(.failure(.noData))
+                print(error?.localizedDescription ?? "No errror description")
+                return
+            }
+            do {
+                let decoder = JSONDecoder()
+                let type = try decoder.decode(T.self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(type))
+                }
+            } catch {
+                completion(.failure(.decodingError))
+            }
+        }.resume()
+    }
+    
+    func fetchImage(from url: String?) -> Data? {
+        guard let stringURL = url else { return nil }
+        guard let imageURL = URL(string: stringURL) else { return nil }
+        return try? Data(contentsOf: imageURL)
     }
 }
 
