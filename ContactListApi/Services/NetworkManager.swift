@@ -9,7 +9,8 @@ import Foundation
 
 enum Link: String {
     case linkFor1 = "https://randomuser.me/api/"
-    case linkFor20 = "https://randomuser.me/api/?results=10"
+    case linkFor10 = "https://randomuser.me/api/?results=10"
+    case linkFor50 = "https://randomuser.me/api/?results=50"
 }
 
 enum NetworkError: Error {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F32B8AD2774C7A200C0650C /* ContactForSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32B8AC2774C7A200C0650C /* ContactForSession.swift */; };
+		5F32B8AF2789C4DA00C0650C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F32B8AE2789C4DA00C0650C /* DetailsViewController.swift */; };
 		5FCB5F80276A2A7100EF4182 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB5F7F276A2A7100EF4182 /* AppDelegate.swift */; };
 		5FCB5F82276A2A7100EF4182 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB5F81276A2A7100EF4182 /* SceneDelegate.swift */; };
 		5FCB5F87276A2A7100EF4182 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB5F85276A2A7100EF4182 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		5F32B8AC2774C7A200C0650C /* ContactForSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactForSession.swift; sourceTree = "<group>"; };
+		5F32B8AE2789C4DA00C0650C /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		5FCB5F7C276A2A7100EF4182 /* ContactListApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactListApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FCB5F7F276A2A7100EF4182 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FCB5F81276A2A7100EF4182 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				5FCB5F9F276B44DD00EF4182 /* ButtonsViewController.swift */,
 				5FCB5F9D276A6A5500EF4182 /* ContactListViewController.swift */,
+				5F32B8AE2789C4DA00C0650C /* DetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				5FCB5FA2276B451900EF4182 /* ButtonsViewCell.swift in Sources */,
 				5F32B8AD2774C7A200C0650C /* ContactForSession.swift in Sources */,
+				5F32B8AF2789C4DA00C0650C /* DetailsViewController.swift in Sources */,
 				5FCB5F80276A2A7100EF4182 /* AppDelegate.swift in Sources */,
 				5FCB5F9E276A6A5500EF4182 /* ContactListViewController.swift in Sources */,
 				5FCB5F97276A361B00EF4182 /* NetworkManager.swift in Sources */,

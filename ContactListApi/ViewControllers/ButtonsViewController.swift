@@ -8,23 +8,20 @@
 import UIKit
 
 enum UserActions: String, CaseIterable {
-    case showContactList = "Show contact List"
-    case sendContactListWithAlamo = "Send CL with Alamo"
-    case showContactListWithAlamo = "Show CL with Alamo"
+    case showContactList = "Show contact List for 1"
+    case sendContactListWithAlamo = "Show contact list for 10"
+    case showContactListWithAlamo = "Show contact list for 50"
 }
 
 class ButtonsViewController: UICollectionViewController {
     
     let userActions = UserActions.allCases
     
-    //private var data: ContactForSession!
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     // MARK: UICollectionViewDataSource
-   
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         userActions.count
     }
@@ -43,9 +40,9 @@ class ButtonsViewController: UICollectionViewController {
         let userAction = userActions[indexPath.item]
         
         switch userAction {
-        case .showContactList: performSegue(withIdentifier: "urlSession", sender: nil)
-        case .sendContactListWithAlamo: performSegue(withIdentifier: "alamoPost", sender: nil)
-        case .showContactListWithAlamo: performSegue(withIdentifier: "alamoGet", sender: nil)
+        case .showContactList: performSegue(withIdentifier: "clFor1", sender: nil)
+        case .sendContactListWithAlamo: performSegue(withIdentifier: "clFor10", sender: nil)
+        case .showContactListWithAlamo: performSegue(withIdentifier: "clFor50", sender: nil)
         }
     }
     
@@ -53,9 +50,9 @@ class ButtonsViewController: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let contactsVC = segue.destination as! ContactListViewController
         switch segue.identifier {
-        case "urlSession": contactsVC.fetchData()
-        case "alamoPost": contactsVC.fetchContact()
-        case "alamoGet": contactsVC.fetchData()
+        case "clFor1": contactsVC.fetchDataFor1()
+        case "clFor10": contactsVC.fetchContactFor10()
+        case "clFor50": contactsVC.fetchDataFor50()
         default: break
         }
     }

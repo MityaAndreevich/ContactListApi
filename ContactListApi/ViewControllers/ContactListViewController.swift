@@ -43,14 +43,14 @@ class ContactListViewController: UITableViewController {
    
 //MARK: - Navigtion
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let detailsVC = segue.destination as! DetailsViewController
+        detailsVC.contact = sender as? Results
     }
 }
 
 extension ContactListViewController {
-    func fetchData() {
-        NetworkManager.shared.fetchData(from: Link.linkFor20.rawValue) { result in
+    func fetchDataFor1() {
+        NetworkManager.shared.fetchData(from: Link.linkFor1.rawValue) { result in
             switch result {
             case .success(let contactForSession):
                 print(contactForSession)
@@ -62,8 +62,8 @@ extension ContactListViewController {
         }
     }
     
-    func fetchContact() {
-        NetworkManager.shared.fetch(dataType: ContactForSession.self, from: Link.linkFor20.rawValue) { result in
+    func fetchContactFor10() {
+        NetworkManager.shared.fetch(dataType: ContactForSession.self, from: Link.linkFor10.rawValue) { result in
             switch result {
             case .success(let contactForSession):
                 print(contactForSession)
@@ -71,6 +71,19 @@ extension ContactListViewController {
                 self.tableView.reloadData()
             case .failure(let error):
                 print(error)
+            }
+        }
+    }
+    
+    func fetchDataFor50() {
+        NetworkManager.shared.fetchData(from: Link.linkFor50.rawValue) { result in
+            switch result {
+            case .success(let contactForSession):
+                print(contactForSession)
+                self.randomContacts = contactForSession.results ?? []
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }
