@@ -98,9 +98,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="i11-W4-z6f" kind="show" identifier="details" trigger="accessoryAction" id="Q8K-P6-YtY"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -109,6 +106,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Contact List" id="MZU-hG-DUW"/>
+                    <connections>
+                        <segue destination="i11-W4-z6f" kind="show" identifier="showDetails" id="9wA-NE-Ybn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tQy-eq-u03" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,7 +174,7 @@
                                 <variation key="heightClass=compact-widthClass=compact" spacing="10"/>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ief-cJ-dzf">
-                                <rect key="frame" x="92" y="78.5" width="191" height="191.5"/>
+                                <rect key="frame" x="92" y="78.5" width="191.5" height="191.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ief-cJ-dzf" secondAttribute="height" multiplier="1:1" id="Sta-Xd-xHw"/>
                                 </constraints>

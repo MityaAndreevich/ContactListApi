@@ -10,17 +10,17 @@ import UIKit
 class ContactListViewController: UITableViewController {
     
     var randomContacts: [Results] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 100
     }
-
+    
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         randomContacts.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
@@ -40,10 +40,16 @@ class ContactListViewController: UITableViewController {
         cell.contentConfiguration = content
         return cell
     }
-   
-//MARK: - Navigtion
+    
+    //MARK: - Table View Delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = randomContacts[indexPath.row]
+        performSegue(withIdentifier: "showDetails", sender: user )
+    }
+    
+    //MARK: - Navigtion
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let detailsVC = segue.destination as! DetailsViewController
+        guard let detailsVC = segue.destination as? DetailsViewController else { return }
         detailsVC.contact = sender as? Results
     }
 }

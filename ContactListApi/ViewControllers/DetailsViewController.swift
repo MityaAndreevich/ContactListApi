@@ -25,8 +25,14 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setValue(with: contact)
+    }
+    
+    private func setValue(with result: Results) {
+        let imageURL = contact.picture?.large
+        guard let imageData = NetworkManager.shared.fetchImage(from: imageURL) else { return }
+        self.contactImageView.image = UIImage(data: imageData)
         
-        //contactImageView.image = contact.picture?.large
         contactName.text = contact.name?.first
         contactSurname.text = contact.name?.last
         contactCell.text = contact.cell
