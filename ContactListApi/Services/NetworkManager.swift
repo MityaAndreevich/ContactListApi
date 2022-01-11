@@ -23,7 +23,7 @@ class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
     
-    func fetchData(from url: String, completion: @escaping(Result<ContactForSession, NetworkError>) -> Void) {
+    func fetchData(from url: String, completion: @escaping(Result<Contact, NetworkError>) -> Void) {
         guard let url = URL(string: url) else {
             completion(.failure(.invalidURL))
             return
@@ -36,7 +36,7 @@ class NetworkManager {
             }
             do {
                 let decoder = JSONDecoder()
-                let contacts = try decoder.decode(ContactForSession.self, from: data)
+                let contacts = try decoder.decode(Contact.self, from: data)
                 DispatchQueue.main.async {
                     completion(.success(contacts))
                 }
@@ -65,6 +65,7 @@ class NetworkManager {
                 }
             } catch {
                 completion(.failure(.decodingError))
+                print(error)
             }
         }.resume()
     }

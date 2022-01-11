@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ContactForSession: Codable {
+struct Contact: Codable {
     let info: Info?
     let results: [Results]?
 }
@@ -15,7 +15,7 @@ struct ContactForSession: Codable {
 struct Results: Codable {
     let gender: String?
     let name: Name?
-    let location: Location?
+    //let location: Location? // deleted to escape corrupted JSON file
     let email: String?
     let login: Login?
     let dob, registered: Dob?
@@ -33,7 +33,7 @@ struct Name: Codable {
     let last: String?
 }
 //MARK: - Location
-struct Location: Codable {
+/*struct Location: Codable {
     let street: Street?
     let city: String?
     let state: String?
@@ -41,12 +41,14 @@ struct Location: Codable {
     let postcode: Int?
     let coordinates: Coordinates?
     let timezone: Timezone?
-}
+}*/
+
 //MARK: - Street
-struct Street: Codable {
+/*struct Street: Codable {
     let number: Int?
     let name: String?
 }
+
 //MARK: - Coordinates
 struct Coordinates: Codable {
     let latitude: String?
@@ -56,7 +58,7 @@ struct Coordinates: Codable {
 struct Timezone: Codable {
     let offset: String?
     let description: String?
-}
+}*/
 //MARK: - Login
 struct Login: Codable {
     let uuid: String?

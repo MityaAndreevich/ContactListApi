@@ -69,7 +69,7 @@ extension ContactListViewController {
     }
     
     func fetchContactFor10() {
-        NetworkManager.shared.fetch(dataType: ContactForSession.self, from: Link.linkFor10.rawValue) { result in
+        NetworkManager.shared.fetch(dataType: Contact.self, from: Link.linkFor10.rawValue) { result in
             switch result {
             case .success(let contactForSession):
                 print(contactForSession)
