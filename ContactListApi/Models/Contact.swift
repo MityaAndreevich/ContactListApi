@@ -19,7 +19,6 @@ struct Results: Codable {
     let email: String?
     let login: Login?
     let dob, registered: Dob?
-   // let registered: Registered?
     let phone: String?
     let cell: String?
     let id: ID?
@@ -74,11 +73,6 @@ struct Dob: Codable {
     let date: String?
     let age: Int?
 }
-//MARK: - Registrated
-//struct Registered: Codable {
-   // let date: String?
-   // let age: Int?
-//}
 //MARK: - ID
 struct ID: Codable {
     let name: String?

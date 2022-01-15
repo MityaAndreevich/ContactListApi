@@ -9,40 +9,36 @@ import UIKit
 
 enum UserActions: String, CaseIterable {
     case showContactList = "Show contact List for 1"
-    case sendContactListWithAlamo = "Show contact list for 10"
-    case showContactListWithAlamo = "Show contact list for 50"
+    case showContactListFor10 = "Show contact list for 10"
+    case showContactListFor50 = "Show contact list for 50"
 }
 
 class ButtonsViewController: UICollectionViewController {
     
     let userActions = UserActions.allCases
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         userActions.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "button", for: indexPath) as! ButtonsViewCell
-    
+        
         let userAction = userActions[indexPath.item]
         cell.userActionLabel.text = userAction.rawValue
         
         return cell
     }
-
+    
     // MARK: UICollectionViewDelegate
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let userAction = userActions[indexPath.item]
         
         switch userAction {
         case .showContactList: performSegue(withIdentifier: "clFor1", sender: nil)
-        case .sendContactListWithAlamo: performSegue(withIdentifier: "clFor10", sender: nil)
-        case .showContactListWithAlamo: performSegue(withIdentifier: "clFor50", sender: nil)
+        case .showContactListFor10: performSegue(withIdentifier: "clFor10", sender: nil)
+        case .showContactListFor50: performSegue(withIdentifier: "clFor50", sender: nil)
         }
     }
     

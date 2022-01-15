@@ -8,7 +8,5 @@
 import UIKit
 
 class ButtonsViewCell: UICollectionViewCell {
-    
     @IBOutlet var userActionLabel: UILabel!
-    
 }
