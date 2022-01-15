@@ -14,7 +14,6 @@
 		5FCB5F87276A2A7100EF4182 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB5F85276A2A7100EF4182 /* Main.storyboard */; };
 		5FCB5F89276A2A7200EF4182 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB5F88276A2A7200EF4182 /* Assets.xcassets */; };
 		5FCB5F8C276A2A7200EF4182 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FCB5F8A276A2A7200EF4182 /* LaunchScreen.storyboard */; };
-		5FCB5F94276A2CA300EF4182 /* ContactForAlamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB5F93276A2CA300EF4182 /* ContactForAlamo.swift */; };
 		5FCB5F97276A361B00EF4182 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB5F96276A361B00EF4182 /* NetworkManager.swift */; };
 		5FCB5F9E276A6A5500EF4182 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB5F9D276A6A5500EF4182 /* ContactListViewController.swift */; };
 		5FCB5FA0276B44DD00EF4182 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCB5F9F276B44DD00EF4182 /* ButtonsViewController.swift */; };
@@ -31,7 +30,6 @@
 		5FCB5F88276A2A7200EF4182 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FCB5F8B276A2A7200EF4182 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FCB5F8D276A2A7200EF4182 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FCB5F93276A2CA300EF4182 /* ContactForAlamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactForAlamo.swift; sourceTree = "<group>"; };
 		5FCB5F96276A361B00EF4182 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5FCB5F9D276A6A5500EF4182 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
 		5FCB5F9F276B44DD00EF4182 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				5F32B8AC2774C7A200C0650C /* Contact.swift */,
-				5FCB5F93276A2CA300EF4182 /* ContactForAlamo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,7 +199,6 @@
 				5FCB5F80276A2A7100EF4182 /* AppDelegate.swift in Sources */,
 				5FCB5F9E276A6A5500EF4182 /* ContactListViewController.swift in Sources */,
 				5FCB5F97276A361B00EF4182 /* NetworkManager.swift in Sources */,
-				5FCB5F94276A2CA300EF4182 /* ContactForAlamo.swift in Sources */,
 				5FCB5FA0276B44DD00EF4182 /* ButtonsViewController.swift in Sources */,
 				5FCB5F82276A2A7100EF4182 /* SceneDelegate.swift in Sources */,
 			);
