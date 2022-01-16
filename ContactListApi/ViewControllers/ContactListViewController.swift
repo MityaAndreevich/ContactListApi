@@ -9,7 +9,7 @@ import UIKit
 
 class ContactListViewController: UITableViewController {
     
-    var randomContacts: [Results] = []
+    private var randomContacts: [Results] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
