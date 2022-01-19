@@ -47,7 +47,7 @@ class ContactListViewController: UITableViewController {
         performSegue(withIdentifier: "showDetails", sender: user )
     }
     
-    //MARK: - Navigtion
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailsVC = segue.destination as? DetailsViewController else { return }
         detailsVC.contact = sender as? Results
